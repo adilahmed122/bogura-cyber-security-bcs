@@ -6,173 +6,179 @@
 <title>BCS - Bogura Cyber Security</title>
 
 <style>
-/* ===== Global ===== */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+font-family: Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#0b0b0b;
-    color:white;
+background:#070707;
+color:white;
 }
 
-/* ===== Navigation ===== */
+/* NAVBAR */
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    background:#111;
-    position:sticky;
-    top:0;
-    z-index:100;
+display:flex;
+justify-content:space-between;
+padding:18px 50px;
+background:#0f0f0f;
+position:sticky;
+top:0;
+z-index:999;
 }
 
-nav h2{
-    color:red;
-    font-size:24px;
+.logo{
+font-size:24px;
+color:red;
+font-weight:bold;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:bold;
 }
 
 nav a:hover{
-    color:red;
-    transition:0.3s;
+color:red;
 }
 
-/* ===== Hero Section ===== */
+/* HERO */
 .hero{
-    text-align:center;
-    padding:120px 20px;
-    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b');
-    background-size:cover;
-    background-position:center;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+url("https://images.unsplash.com/photo-1563986768609-322da13575f3");
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
-    font-size:50px;
-    color:red;
-    margin-bottom:20px;
-    animation: fadeInDown 1s;
+font-size:60px;
+color:red;
+animation:fadeDown 1s;
 }
 
 .hero p{
-    font-size:20px;
-    margin-bottom:30px;
-    animation: fadeInUp 1.5s;
+font-size:20px;
+margin:20px 0;
 }
 
 .hero button{
-    padding:15px 30px;
-    border:none;
-    border-radius:30px;
-    background:red;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
+padding:15px 35px;
+border:none;
+border-radius:30px;
+background:red;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
 }
 
 .hero button:hover{
-    background:#ff3333;
-    transform:scale(1.05);
+transform:scale(1.1);
 }
 
-/* ===== Services Section ===== */
-.services{
-    padding:60px 40px;
-    text-align:center;
+/* SERVICES */
+
+.section{
+padding:80px 50px;
+text-align:center;
 }
 
-.services h2{
-    color:red;
-    margin-bottom:40px;
+.section h2{
+color:red;
+margin-bottom:50px;
 }
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
-    background:#1a1a1a;
-    padding:25px;
-    border-radius:15px;
-    border:1px solid red;
-    transition:0.3s;
+background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid red;
+transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 15px red;
+transform:translateY(-12px);
+box-shadow:0 0 20px red;
 }
 
-/* ===== Contact Section ===== */
+/* CONTACT */
+
 .contact{
-    text-align:center;
-    padding:60px 20px;
-    background:#111;
+text-align:center;
+padding:70px 20px;
+background:#0f0f0f;
 }
 
 .contact button{
-    padding:14px 30px;
-    border:none;
-    border-radius:30px;
-    background:red;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
+padding:14px 30px;
+margin:10px;
+border:none;
+border-radius:25px;
+background:red;
+color:white;
+cursor:pointer;
 }
 
-.contact button:hover{
-    background:#ff3333;
-    transform:scale(1.05);
-}
+/* FOOTER */
 
-/* ===== Footer ===== */
 footer{
-    text-align:center;
-    padding:20px;
-    background:#111;
-    margin-top:40px;
+text-align:center;
+padding:25px;
+background:#050505;
+margin-top:40px;
 }
 
-/* ===== Animations ===== */
-@keyframes fadeInDown{
-    from{opacity:0; transform:translateY(-50px);}
-    to{opacity:1; transform:translateY(0);}
+/* ANIMATION */
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
-@keyframes fadeInUp{
-    from{opacity:0; transform:translateY(50px);}
-    to{opacity:1; transform:translateY(0);}
-}
+/* MOBILE */
 
-/* ===== Responsive ===== */
 @media(max-width:768px){
-    nav{flex-direction:column;}
-    nav div{margin-top:10px;}
-    .hero h1{font-size:36px;}
-    .hero p{font-size:16px;}
+.hero h1{
+font-size:40px;
 }
+nav{
+flex-direction:column;
+align-items:center;
+}
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- Navigation -->
 <nav>
-<h2>🔐 BCS</h2>
+<div class="logo">🔐 BCS</div>
+
 <div>
 <a href="#">Home</a>
 <a href="#services">Services</a>
@@ -180,46 +186,51 @@ footer{
 </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="hero">
 <h1>Bogura Cyber Security</h1>
-<p>Protecting Your Social Media & Privacy</p>
-<button onclick="window.location.href='#contact'">Get Support</button>
+<p>Protect Your Social Media Security & Privacy</p>
+<button onclick="location.href='#contact'">Get Support</button>
 </section>
 
-<!-- Services Section -->
-<section class="services" id="services">
+<section class="section" id="services">
 <h2>Our Services</h2>
+
 <div class="cards">
 
 <div class="card">
-<h3>Facebook Recovery</h3>
-<p>Account recovery & protection service</p>
+<h3>Facebook Security</h3>
+<p>Account recovery & protection</p>
 </div>
 
 <div class="card">
 <h3>Post Removal</h3>
-<p>Harassment content removal support</p>
+<p>Harassment content remove service</p>
 </div>
 
 <div class="card">
 <h3>24/7 Support</h3>
-<p>Always here to help with security issues</p>
+<p>Always ready to help you</p>
 </div>
 
 </div>
 </section>
 
-<!-- Contact Section -->
 <section class="contact" id="contact">
 <h2>Contact Us</h2>
-<p>Need help? Contact our security team now</p>
+<p>Need security help? Contact us now</p>
+
 <br>
-<button onclick="window.open('https://wa.me/880XXXXXXXXXX')">WhatsApp Contact</button>
-<button onclick="window.location.href='mailto:boguracybersecurity@example.com'">Email Us</button>
+
+<button onclick="window.open('https://wa.me/880XXXXXXXXXX')">
+WhatsApp Contact
+</button>
+
+<button onclick="window.location.href='mailto:example@gmail.com'">
+Email Us
+</button>
+
 </section>
 
-<!-- Footer -->
 <footer>
 <p>© 2026 Bogura Cyber Security - BCS</p>
 </footer>
