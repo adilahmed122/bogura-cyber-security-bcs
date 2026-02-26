@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BCS - Bogura Cyber Security</title>
 
 <style>
+
 body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background:#0a0a0a;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
     color:white;
 }
 
+/* Navigation */
 nav{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     padding:15px 40px;
     background:#111;
 }
@@ -23,50 +27,85 @@ nav a{
     color:white;
     text-decoration:none;
     margin-left:20px;
+    font-weight:bold;
 }
 
+/* Hero Section */
 .hero{
     text-align:center;
-    padding:100px 20px;
-    background:#111;
+    padding:120px 20px;
+    background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b');
+    background-size:cover;
+    background-position:center;
 }
 
 .hero h1{
+    font-size:50px;
     color:red;
-    font-size:40px;
 }
 
+.hero button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:red;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* Services */
 .services{
+    padding:60px 40px;
+    text-align:center;
+}
+
+.services h2{
+    color:red;
+}
+
+.cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:40px;
+    gap:25px;
+    margin-top:40px;
 }
 
 .card{
     background:#1a1a1a;
-    padding:20px;
+    padding:25px;
     border-radius:15px;
     border:1px solid red;
-    text-align:center;
+    transition:0.3s;
 }
 
-button{
-    padding:12px 25px;
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.contact button{
+    padding:14px 30px;
+    border:none;
+    border-radius:30px;
     background:red;
     color:white;
-    border:none;
-    border-radius:25px;
-    cursor:pointer;
     font-size:16px;
 }
 
+/* Footer */
 footer{
     text-align:center;
     padding:20px;
     background:#111;
     margin-top:40px;
 }
+
 </style>
 
 </head>
@@ -84,28 +123,39 @@ footer{
 
 <section class="hero">
 <h1>Bogura Cyber Security</h1>
-<p>We Protect Your Social Media Security</p>
+<p>Protect Your Social Media Security & Privacy</p>
 <br>
-<button>Contact Us</button>
+<button>Get Support</button>
 </section>
 
 <section class="services">
+<h2>Our Services</h2>
+
+<div class="cards">
 
 <div class="card">
-<h3>Facebook Security</h3>
-<p>Account recovery & protection</p>
+<h3>Facebook Recovery</h3>
+<p>Account recovery & protection service</p>
 </div>
 
 <div class="card">
 <h3>Post Removal</h3>
-<p>Harassment content remove service</p>
+<p>Harassment content removal support</p>
 </div>
 
 <div class="card">
-<h3>Support</h3>
-<p>24/7 security support</p>
+<h3>Security Support</h3>
+<p>24/7 social media security help</p>
 </div>
 
+</div>
+</section>
+
+<section class="contact">
+<h2>Contact Us</h2>
+<p>Need help? Contact our security team</p>
+<br>
+<button>WhatsApp Contact</button>
 </section>
 
 <footer>
