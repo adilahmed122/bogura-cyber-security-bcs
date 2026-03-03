@@ -10,36 +10,37 @@
 *{
 margin:0;
 padding:0;
-font-family: Arial, Helvetica, sans-serif;
+font-family: Arial;
 scroll-behavior:smooth;
 }
 
 body{
-background:#070707;
+background:black;
 color:white;
 }
 
-/* NAVBAR */
+/* Navbar */
+
 nav{
 display:flex;
 justify-content:space-between;
-padding:18px 50px;
-background:#0f0f0f;
+align-items:center;
+padding:15px 40px;
+background:#111;
 position:sticky;
 top:0;
 z-index:999;
 }
 
-.logo{
-font-size:24px;
-color:red;
-font-weight:bold;
+.logo img{
+height:50px;
+border-radius:10px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:25px;
+margin-left:20px;
 font-weight:bold;
 }
 
@@ -47,7 +48,8 @@ nav a:hover{
 color:red;
 }
 
-/* HERO */
+/* Hero */
+
 .hero{
 height:100vh;
 display:flex;
@@ -56,16 +58,15 @@ justify-content:center;
 align-items:center;
 text-align:center;
 
-background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
 url("https://images.unsplash.com/photo-1563986768609-322da13575f3");
 background-size:cover;
 background-position:center;
 }
 
 .hero h1{
-font-size:60px;
+font-size:55px;
 color:red;
-animation:fadeDown 1s;
 }
 
 .hero p{
@@ -74,101 +75,53 @@ margin:20px 0;
 }
 
 .hero button{
-padding:15px 35px;
+padding:15px 30px;
 border:none;
 border-radius:30px;
 background:red;
 color:white;
 font-size:16px;
 cursor:pointer;
-transition:.3s;
 }
 
-.hero button:hover{
-transform:scale(1.1);
-}
-
-/* SERVICES */
+/* Services */
 
 .section{
-padding:80px 50px;
+padding:80px 40px;
 text-align:center;
 }
 
 .section h2{
 color:red;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:25px;
 }
 
 .card{
 background:#111;
-padding:30px;
-border-radius:20px;
+padding:25px;
+border-radius:15px;
 border:1px solid red;
-transition:.4s;
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-12px);
+transform:translateY(-10px);
 box-shadow:0 0 20px red;
 }
 
-/* CONTACT */
-
-.contact{
-text-align:center;
-padding:70px 20px;
-background:#0f0f0f;
-}
-
-.contact button{
-padding:14px 30px;
-margin:10px;
-border:none;
-border-radius:25px;
-background:red;
-color:white;
-cursor:pointer;
-}
-
-/* FOOTER */
+/* Footer */
 
 footer{
 text-align:center;
-padding:25px;
-background:#050505;
+padding:20px;
+background:#111;
 margin-top:40px;
-}
-
-/* ANIMATION */
-
-@keyframes fadeDown{
-from{
-opacity:0;
-transform:translateY(-50px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-.hero h1{
-font-size:40px;
-}
-nav{
-flex-direction:column;
-align-items:center;
-}
 }
 
 </style>
@@ -177,19 +130,23 @@ align-items:center;
 <body>
 
 <nav>
-<div class="logo">🔐 BCS</div>
+
+<div class="logo">
+<img src="logo.png">
+</div>
 
 <div>
 <a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </div>
+
 </nav>
 
 <section class="hero">
 <h1>Bogura Cyber Security</h1>
-<p>Protect Your Social Media Security & Privacy</p>
-<button onclick="location.href='#contact'">Get Support</button>
+<p>Protecting Your Digital Security</p>
+<button onclick="location.href='#contact'">Contact Us</button>
 </section>
 
 <section class="section" id="services">
@@ -198,37 +155,31 @@ align-items:center;
 <div class="cards">
 
 <div class="card">
-<h3>Facebook Security</h3>
-<p>Account recovery & protection</p>
+<h3>Facebook Recovery</h3>
+<p>Account security & recovery</p>
 </div>
 
 <div class="card">
 <h3>Post Removal</h3>
-<p>Harassment content remove service</p>
+<p>Remove harmful content</p>
 </div>
 
 <div class="card">
-<h3>24/7 Support</h3>
-<p>Always ready to help you</p>
+<h3>Security Support</h3>
+<p>24/7 help service</p>
 </div>
 
 </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="section" id="contact">
 <h2>Contact Us</h2>
-<p>Need security help? Contact us now</p>
-
+<p>Need help? Contact our team</p>
 <br>
-
-<button onclick="window.open('https://wa.me/880XXXXXXXXXX')">
+<button style="padding:14px 30px;background:red;color:white;border:none;border-radius:25px;"
+onclick="window.open('https://wa.me/880XXXXXXXXXX')">
 WhatsApp Contact
 </button>
-
-<button onclick="window.location.href='mailto:example@gmail.com'">
-Email Us
-</button>
-
 </section>
 
 <footer>
